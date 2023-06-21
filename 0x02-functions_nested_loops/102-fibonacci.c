@@ -8,23 +8,26 @@
 
 int main(void)
 {
-	int first = 1, second = 2, next;
+	int count = 0;
+	unsigned long first = 0, second = 1, sum;
 
-	while (first <= 50)
+	while (count < 50)
 	{
-		printf("%d", first);
-		if (first != 34)
-		{
-			printf(", ");
-		}
-		else
+		sum = first + second;
+		printf("%lu", sum);
+
+		first = second;
+		second = sum;
+
+		if (count == 49)
 		{
 			printf("\n");
 		}
-
-		next = first + second;
-		first = second;
-		second = next;
+		else
+		{
+			printf(", ");
+		}
+		count++;
 	}
 	return (0);
 }
