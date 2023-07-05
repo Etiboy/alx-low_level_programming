@@ -1,6 +1,6 @@
 #include "main.h"
 
-int find_sqrt(int x, int i);
+int find_sqrt(int n, int i);
 
 /**
  * _sqrt_recursion - a function that returns
